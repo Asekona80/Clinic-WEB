@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Medical Folder - HealthCare Clinic</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <h2>HealthCare Clinic</h2>
+    </div>
+    <nav class="main-nav">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="index.html">Home</a>
+    </nav>
+  </header>
+
+  <main class="folder-main">
+    <h2>Your Medical Folder</h2>
+    <form class="folder-form" id="folderForm">
+      <!-- Personal Information -->
+      <fieldset>
+        <legend>Personal Information</legend>
+
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" placeholder="Enter your full name" required />
+
+        <label for="idNumber">ID Number</label>
+        <input type="text" id="idNumber" placeholder="Enter your ID number" required />
+
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" required />
+
+        <label for="gender">Gender</label>
+        <select id="gender" required>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" placeholder="Enter your phone number" required />
+      </fieldset>
+
+      <!-- Medical Information -->
+      <fieldset>
+        <legend>Medical Information</legend>
+
+        <label for="medicalHistory">Medical History</label>
+        <textarea id="medicalHistory" placeholder="Enter your medical history here..." required></textarea>
+
+        <label for="medications">Current Medications</label>
+        <textarea id="medications" placeholder="List your current medications..." required></textarea>
+
+        <label for="allergies">Known Allergies</label>
+        <textarea id="allergies" placeholder="Enter any known allergies..." required></textarea>
+      </fieldset>
+
+      <!-- Health Insurance Information -->
+      <fieldset>
+        <legend>Health Insurance Information</legend>
+
+        <label for="insuranceProvider">Insurance Provider</label>
+        <input type="text" id="insuranceProvider" placeholder="Enter your insurance provider name" />
+
+        <label for="policyNumber">Policy Number</label>
+        <input type="text" id="policyNumber" placeholder="Enter your insurance policy number" />
+      </fieldset>
+
+      <!-- Next of Kin Information -->
+      <fieldset>
+        <legend>Next of Kin</legend>
+
+        <label for="nextOfKinName">Full Name</label>
+        <input type="text" id="nextOfKinName" placeholder="Enter your next of kin's full name" required />
+
+        <label for="nextOfKinRelationship">Relationship</label>
+        <input type="text" id="nextOfKinRelationship" placeholder="Enter your relationship to the next of kin" required />
+
+        <label for="nextOfKinPhone">Phone Number</label>
+        <input type="tel" id="nextOfKinPhone" placeholder="Enter next of kin's phone number" required />
+      </fieldset>
+
+      <button type="submit">Save</button>
+    </form>
+
+    <div id="feedbackMessage"></div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 HealthCare Clinic. All rights reserved.</p>
+  </footer>
+
+  <script src="js/folder.js"></script>
+</body>
+</html>

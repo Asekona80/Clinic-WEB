@@ -1,0 +1,79 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clinic Landing Page</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+</head>
+<body>
+    <header class="header">
+        <div class="header-top">
+          <div class="logo">HealthCare Clinic</div>
+          <button class="menu-toggle" id="menuToggle">☰</button>
+          <nav class="main-nav" id="mainNav">
+            <a href="#services">Services</a>
+            <a href="#mission">Mission</a>
+            <a href="#about">About</a>
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+          </nav>
+        </div>
+      </header>      
+
+  <main>
+    <section class="hero">
+      <h2>Your Health, Our Priority</h2>
+      <p>Providing quality care for your health and well-being.</p>
+    </section>
+
+    <section id="services" class="content-section">
+      <h2>Our Services</h2>
+      <ul>
+        <li>General Check-ups</li>
+        <li>Specialist Consultations</li>
+        <li>Emergency Care</li>
+        <li>Medication Collection</li>
+      </ul>
+    </section>
+
+    <section id="mission" class="content-section">
+      <h2>Our Mission</h2>
+      <p>We aim to improve community health by offering accessible, affordable, and high-quality healthcare services with compassion and respect.</p>
+    </section>
+
+    <section id="about" class="content-section">
+      <h2>About Us</h2>
+      <p>HealthCare Clinic is dedicated to serving our patients with integrity and excellence. Our team of professionals is committed to making your experience comfortable and effective.</p>
+    </section>
+
+    <section class="news">
+      <h2>Latest News</h2>
+      <a href="feeds.html">Read Clinic News</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 HealthCare Clinic. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Smooth scroll for nav links
+    document.querySelectorAll('.main-nav a[href^="#"]').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+  // Toggle mobile menu
+  document.getElementById('menuToggle').addEventListener('click', function () {
+    document.getElementById('mainNav').classList.toggle('active');
+  });
+  </script>
+</body>
+</html>
