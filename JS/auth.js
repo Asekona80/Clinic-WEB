@@ -12,7 +12,7 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
         alert('Login successful!');
         
         // Redirect to the dashboard
-        window.location.href = 'dasboard.html';  // Change this to the correct dashboard page
+        window.location.href = 'dashboard.html';  // Change this to the correct dashboard page
     } else {
         alert('Please enter both phone number and password.');
     }
