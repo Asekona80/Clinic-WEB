@@ -1,23 +1,19 @@
-from twilio.rest import Client
+# Simulating the message sending process without Twilio
 
-# Your Twilio credentials
-account_sid = 'AC4678fc70a3b04ae671c9738ab1c9ab75'
-auth_token = 'b5e93d80a439b004ea3fda3cd0ae24d2'
+def send_sms_simulated(from_phone_number, to_phone_number, message_body):
+    # Simulate sending the SMS
+    print("Simulating sending message...")
+    print(f"From: {from_phone_number}")
+    print(f"To: {to_phone_number}")
+    print(f"Message: {message_body}")
+    print("✅ Message sent successfully!")
 
-# Create a Twilio client
-client = Client(account_sid, auth_token)
+# Your phone number (no Twilio)
+from_phone_number = '+27818273587'  # Replace with your personal number
+to_phone_number = '+27824206222'    # Replace with the recipient's number
 
-# Ask the client for their phone number
-from_phone_number = input("Enter your Twilio phone number (e.g., +12345678901): ")
-to_phone_number = input("Enter the recipient's phone number (e.g., +12345678901): ")
+# Message body
+message_body = "Hello! This is a test message from your HealthCare Clinic app. 🚀"
 
-# Send the message
-try:
-    message = client.messages.create(
-        body="Hello from Twilio and Python! 🚀",
-        from_=from_phone_number,  # Client's Twilio phone number
-        to=to_phone_number        # Recipient's phone number
-    )
-    print("✅ Message sent! SID:", message.sid)
-except Exception as e:
-    print(f"Error: {e}")
+# Simulate sending the message
+send_sms_simulated(from_phone_number, to_phone_number, message_body)
