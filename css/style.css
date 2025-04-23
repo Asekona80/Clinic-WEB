@@ -49,8 +49,8 @@
   }
   
   .main-nav a:hover {
-    background-color: #2091f3;
-    color: #003366;
+    background-color: #f1f1f1;
+    color: #eff2f6;
   }
   
   /* Hero Section */
@@ -74,7 +74,8 @@
     background: rgba(255, 255, 255, 0.4); /* optional contrast */
     padding: 10px 20px;
     border-radius: 10px;
-    color: rgb(32, 117, 167);
+    color: rgb(40, 69, 212);
+    font-weight: bold;
   }
   
   .hero h2 {
@@ -136,7 +137,7 @@
   }
   
   .news a:hover {
-    background-color: #ffcc00;
+    background-color: #16abeb;
     color: #003366;
   }
   
@@ -285,7 +286,7 @@
   }
   
   button:hover {
-    background-color: #ffcc00;
+    background-color: #16abeb;
   }
   
   .login-link {
@@ -299,7 +300,7 @@
   }
   
   .login-link a:hover {
-    color: #ffcc00;
+    color: #16abeb;
   }
   
   /* Responsive Styles */
@@ -417,7 +418,7 @@
   }
   
   .login-section button:hover {
-    background-color: #ffcc00;
+    background-color:#16abeb;
     color: #003366;
   }
   
@@ -432,7 +433,7 @@
   }
   
   .register-link a:hover {
-    color: #ffcc00;
+    color: #16abeb;
   }
   
   /* Footer */
@@ -835,7 +836,7 @@
   }
   
   .chat-input button:hover {
-    background-color: #ffcc00;
+    background-color: #16abeb;
     color: #003366;
   }
   
@@ -883,5 +884,5 @@
     width: 100%;
     bottom: 0;
   }
-/* feeds news*****/
-  
+/* chat with us*****/
+
