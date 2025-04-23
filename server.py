@@ -1,48 +1,17 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
+import openai
+import requests
+import sqlite3
 
-app = Flask(__name__)
-CORS(app)
-
-@app.route('/api/book-appointment', methods=['POST'])
-def book_appointment():
-    data = request.json
-    print("Received appointment data:", data)
-    
-    return jsonify({
-        "message": f"Appointment with {data['doctor']} on {data['appointmentDate']} at {data['appointmentTime']} is confirmed!"
-    })
-
-if __name__ == '__main__':
-    app.run(debug=True)
-
-
-app = Flask(__name__)
-CORS(app)
-
-@app.route('/api/save-folder', methods=['POST'])
-def save_folder():
-    data = request.json
-
-    # You can store this data in a database here, but for now, we will just print it
-    print("Received patient folder data:", data)
-
-    # Simulate a success response
-    return jsonify({
-        "message": f"Medical folder for {data['fullName']} has been saved successfully!"
-    })
-    
-
-if __name__ == '__main__':
-    app.run(debug=True)
-
-from flask import Flask, request, jsonify
-from flask_cors import CORS
-
+# Initialize Flask app
 app = Flask(__name__)
 CORS(app)  # Enable CORS for local testing
 
-# Existing route for booking appointments
+# OpenAI API Key (Replace with your actual key)
+openai.api_key = "YOUR_OPENAI_API_KEY"
+
+# Route to book an appointment
 @app.route('/api/book-appointment', methods=['POST'])
 def book_appointment():
     data = request.json
@@ -52,7 +21,7 @@ def book_appointment():
         "message": f"Appointment with {data['doctor']} on {data['appointmentDate']} at {data['appointmentTime']} is confirmed!"
     })
 
-# New route to save medical folder data
+# Route to save medical folder data
 @app.route('/api/save-folder', methods=['POST'])
 def save_folder():
     data = request.json
@@ -64,19 +33,7 @@ def save_folder():
         "message": "Your medical folder has been successfully saved!"
     })
 
-if __name__ == '__main__':
-    app.run(debug=True)
-
-
-from flask import Flask, request, jsonify
-from flask_cors import CORS
-import openai
-
-app = Flask(__name__)
-CORS(app)
-
-openai.api_key = "YOUR_OPENAI_API_KEY"  # Replace with your actual key
-
+# Route for AI-powered chat (e.g., with a clinic assistant)
 @app.route('/api/chat', methods=['POST'])
 def chat():
     user_message = request.json.get("message", "")
@@ -92,15 +49,8 @@ def chat():
     reply = response.choices[0].message.content.strip()
     return jsonify({"reply": reply})
 
-if __name__ == '__main__':
-    app.run(debug=True)
-
-import requests
-from flask import Flask, jsonify
-
-app = Flask(__name__)
-
-@app.route('/api/news')
+# Route to fetch latest health news
+@app.route('/api/news', methods=['GET'])
 def get_health_news():
     api_key = "e5338cfdfe6746b7a79585301bf0cdda"  # Your API key
     url = f'https://newsapi.org/v2/everything?q=health&apiKey={api_key}'
@@ -118,5 +68,25 @@ def get_health_news():
     
     return jsonify(articles)
 
+# Route to get the latest temperature data (from your database)
+def get_db_connection():
+    connection = sqlite3.connect('database.db')
+    connection.row_factory = sqlite3.Row
+    return connection
+
+@app.route('/api/get-latest-temperature', methods=['GET'])
+def get_latest_temperature():
+    connection = get_db_connection()
+    cursor = connection.cursor()
+    cursor.execute('SELECT temperature FROM temperature_data ORDER BY id DESC LIMIT 1')
+    row = cursor.fetchone()
+    connection.close()
+    
+    if row:
+        return jsonify({'temperature': row['temperature']})
+    else:
+        return jsonify({'message': 'No data available'}), 404
+
+# Run the Flask app
 if __name__ == '__main__':
     app.run(debug=True)
