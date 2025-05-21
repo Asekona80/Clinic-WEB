@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book Appointment - HealthCare Clinic</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <img src="images/clinic-logo.png" alt="Clinic Logo" />
+      <h1>HealthCare Clinic</h1>
+    </div>
+    <nav class="main-nav">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="index.html">Home</a>
+    </nav>
+  </header>
+
+  <main class="form-wrapper">
+    <section class="appointment-form">
+      <h2>Book Your Appointment</h2>
+      <form id="appointmentForm">
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="phoneNumber">Phone Number</label>
+          <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Enter your phone number" required />
+        </div>
+
+        <div class="form-group">
+          <label for="appointmentDate">Date of Appointment</label>
+          <input type="date" id="appointmentDate" name="appointmentDate" required />
+        </div>
+
+        <div class="form-group">
+          <label for="appointmentTime">Time of Appointment</label>
+          <input type="time" id="appointmentTime" name="appointmentTime" required />
+        </div>
+
+        <div class="form-group">
+          <label for="doctor">Select Doctor/Nurse</label>
+          <select id="doctor" name="doctor" required>
+            <option value="" disabled selected>Select a doctor</option>
+            <option value="Dr. Smith">Dr. Smith</option>
+            <option value="Dr. Johnson">Dr. Johnson</option>
+            <option value="Dr. Williams">Dr. Williams</option>
+            <option value="Dr. Williams">Dr. White</option>
+            <option value="Dr. Williams">Dr. Nongqawuse</option>
+            <option value="Dr. Williams">Dr. Cooper</option>
+            <option value="Dr. Williams">Nrs. Lowery</option>
+            <option value="Dr. Williams">Nrs. Wines</option>
+          </select>
+        </div>
+
+        <button type="submit" id="submitBtn">Book Appointment</button>
+      </form>
+      <p id="confirmationMessage"></p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 HealthCare Clinic. All rights reserved.</p>
+  </footer>
+
+  <script src="../JS/appointment.js"></script>
+</body>
+</html>

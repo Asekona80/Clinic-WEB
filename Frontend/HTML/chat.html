@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chat - HealthCare Clinic</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <h2>HealthCare Clinic</h2>
+    </div>
+    <nav class="main-nav">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="index.html">Home</a>
+    </nav>
+  </header>
+
+  <main class="chat-main">
+    <h2>Chat with Doctor/Admin</h2>
+    <div class="chat-box">
+      <div class="message received">
+        <p>Hello! How can I assist you today?</p>
+      </div>
+      <div class="message sent">
+        <p>I need to confirm my appointment details.</p>
+      </div>
+    </div>
+    <div class="chat-input">
+      <textarea placeholder="Type your message..." id="chatInput"></textarea>
+      <button id="sendMessage">Send</button>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 HealthCare Clinic. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('sendMessage').addEventListener('click', function() {
+      const message = document.getElementById('chatInput').value;
+      if (message.trim() !== "") {
+        const chatBox = document.querySelector('.chat-box');
+        const newMessage = document.createElement('div');
+        newMessage.classList.add('message', 'sent');
+        newMessage.innerHTML = `<p>${message}</p>`;
+        chatBox.appendChild(newMessage);
+        document.getElementById('chatInput').value = "";
+      }
+    });
+  </script>
+</body>
+</html>
