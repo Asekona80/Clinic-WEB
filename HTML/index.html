@@ -1,4 +1,3 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,12 +9,12 @@
 <body>
     <header class="header">
         <div class="header-top">
-          <div class="logo">HealthCare Clinic</div>
+          <div class="logo">MG-CLINIC</div>
           <button class="menu-toggle" id="menuToggle">☰</button>
           <nav class="main-nav" id="mainNav">
+             <a href="#about">About</a>
             <a href="#services">Services</a>
             <a href="#mission">Mission</a>
-            <a href="#about">About</a>
             <a href="login.html">Login</a>
             <a href="register.html">Register</a>
           </nav>
@@ -28,43 +27,131 @@
       <p>Providing quality care for your health and well-being.</p>
     </section>
 
-    <section id="services" class="content-section">
-      <h2>Our Services</h2>
+      <section id="about" class="content-section" style="padding: 2rem; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #333;">
+  <h2 style="font-size: 2.8rem; margin-bottom: 2rem; color: #00539C;">About Us</h2>
+  <div class="cards-container" style="display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center;">
+
+    <!-- Card 1: Text -->
+    <div class="card text-card" style="flex: 1 1 400px; min-width: 300px; background: #f0f8ff; border-radius: 15px; box-shadow: 0 6px 15px rgba(0, 83, 156, 0.15); padding: 2rem; transition: transform 0.3s ease;">
+      <p style="line-height: 1.65; font-size: 1.1rem; margin-bottom: 1rem;">
+        Machubeni Clinic is proudly located in the village of Gxojeni, near Nonkqubela School. This clinic was built to serve the healthcare needs of rural communities in our area, ensuring quality medical services are accessible to all.
+      </p>
+      <p style="line-height: 1.65; font-size: 1.1rem; margin-bottom: 1rem;">
+        We provide compassionate and personalized healthcare with integrity and excellence. Our team works closely with patients to foster a supportive environment where everyone feels valued and cared for.
+      </p>
+      <p style="line-height: 1.65; font-size: 1.1rem; margin-bottom: 1rem;">
+        Our services range from general check-ups and immunizations to chronic disease management and maternal care — supporting you at every step of your healthcare journey.
+      </p>
+      <p style="font-weight: 600; color: #00539C;">
+        Machubeni Clinic is more than a healthcare provider — we are your trusted partner in building a healthier future.
+      </p>
+    </div>
+
+    <!-- Card 2: Image -->
+    <div class="card image-card" style="flex: 1 1 350px; min-width: 280px; background: #e6f0ff; border-radius: 15px; box-shadow: 0 6px 15px rgba(0, 83, 156, 0.15); overflow: hidden; transition: transform 0.3s ease;">
+      <img src="../images/machbeni.jpg" alt="Machubeni Clinic" style="width: 100%; height: auto; display: block;">
+      <div style="padding: 1rem; font-size: 1rem; font-weight: 600; color: #003366; text-align: center; background-color: #cce0ff;">
+        The heart of Gxojeni village – Machubeni Clinic building
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 25px rgba(0, 83, 156, 0.3);
+    }
+
+    @media (max-width: 768px) {
+      .cards-container {
+        flex-direction: column;
+      }
+      .card {
+        flex: 1 1 100% !important;
+      }
+    }
+  </style>
+</section>
+
+
+
+<section id="services" class="content-section">
+  <h2>Our Services</h2>
+
+  <!-- Flex Container -->
+  <div class="services-container"> 
+    
+    <!-- Left Side: Image -->
+    <div class="services-image">
+      <img src="../images/clinic-service.jpg" alt="Clinic Service">
+    </div> 
+    
+    <!-- Right Side: Text -->
+    <div class="services-text">
       <p>At HealthCare Clinic, we are committed to providing compassionate, comprehensive, and accessible healthcare. Our wide range of services includes:</p>
-      <ul>
-        <li><strong>General Check-ups:</strong> Regular health assessments to ensure overall well-being and early detection of potential issues.</li>
-        <li><strong>Specialist Consultations:</strong> Access to experienced specialists including pediatricians, dermatologists, gynecologists, and more.</li>
-        <li><strong>Emergency Care:</strong> Immediate and reliable attention for urgent medical needs and minor injuries.</li>
-        <li><strong>Medication Collection:</strong> Fast and convenient collection of prescribed medications from our in-house pharmacy.</li>
-        <li><strong>Vaccination Services:</strong> Immunizations for children and adults, including flu shots, COVID-19 vaccines, and travel vaccines.</li>
-        <li><strong>Maternity & Prenatal Care:</strong> Supportive care for expectant mothers including prenatal check-ups and birth planning.</li>
-        <li><strong>Chronic Disease Management:</strong> Ongoing care and monitoring for conditions such as diabetes, hypertension, and asthma.</li>
-        <li><strong>Mental Health Support:</strong> Counseling and therapy services for individuals, couples, and families.</li>
-        <li><strong>Lab Tests & Diagnostics:</strong> On-site laboratory services for blood tests, scans, and diagnostics.</li>
-        <li><strong>Health Education & Outreach:</strong> Workshops and resources to promote healthy lifestyles and disease prevention.</li>
-      </ul>
-    </section>
-    
+      <p>
+    At <strong>Machubeni Clinic</strong>, we are proud to serve the people of our village and nearby rural areas with care and compassion. We provide general health check-ups to help you stay well and catch any health concerns early. If you need to see a specialist—such as a doctor for children, women’s health, or skin conditions—we are here for you. In case of emergencies or sudden illness, our team is ready to give quick and reliable help.
+  </p>
+  <p>
+    You can collect your prescribed medicines conveniently from our clinic pharmacy. We offer vaccinations for children and adults, including flu shots and COVID-19 vaccines. For mothers-to-be, we provide prenatal care and support during pregnancy and childbirth.
+  </p>
+  <p>
+    We also help manage chronic conditions like diabetes, high blood pressure, and asthma with regular check-ups and advice. Our mental health support services offer a listening ear and counseling for individuals and families. We conduct basic lab tests right at the clinic, saving you the need to travel far. And because we believe in healthy living, we run community health talks to share knowledge and support a better lifestyle for everyone.
+  </p>
+    </div>
 
-    <section id="mission" class="content-section">
-      <h2>Our Mission</h2>
-      <p>We aim to improve community health by offering accessible, affordable, and high-quality healthcare services with compassion and respect. Our commitment is to provide excellent care that focuses on the well-being of every individual, ensuring that everyone has access to the care they deserve, regardless of their background or financial status.</p>
-      <p>Through innovative solutions, we strive to create a healthier and happier community, empowering individuals with the knowledge and tools to take charge of their health. We work with healthcare professionals who are dedicated to upholding the highest standards of medical practice while fostering a supportive environment for our patients.</p>
-      <p>Our mission is not only to treat illness but also to prevent it, by promoting education, early detection, and proactive wellness programs. We envision a world where every person is supported in their healthcare journey with the trust, care, and attention they deserve.</p>
-    </section>
-    
-    <section id="about" class="content-section">
-      <h2>About Us</h2>
-      <p>HealthCare Clinic is dedicated to serving our patients with integrity and excellence. Our team of professionals is committed to making your experience comfortable and effective. With a focus on providing compassionate care, we strive to ensure that each patient receives personalized attention and treatment tailored to their specific needs.</p>
-      <p>We believe in the power of collaboration between healthcare providers and patients, working together to achieve the best possible outcomes. Our clinic is equipped with state-of-the-art technology, allowing us to offer advanced diagnostic tools and treatments. We are constantly evolving and adapting to meet the ever-changing needs of our community, offering a wide range of medical services from routine check-ups to specialized treatments.</p>
-      <p>Our dedicated team consists of experienced doctors, nurses, and healthcare professionals who are passionate about making a positive impact on people's lives. We are here to support you in every step of your healthcare journey, providing guidance, education, and the highest quality of care.</p>
-    </section>
-    >
+  </div>
+</section>
 
-    <section class="news">
-      <h2>Latest News</h2>
-      <a href="feeds.html">Read Clinic News</a>
-    </section>
+    <section id="mission" class="content-section" style="display: flex; align-items: center; gap: 2rem; flex-wrap: wrap;">
+  <!-- Left side: Image -->
+  <div class="mission-image" style="flex: 1; min-width: 280px;">
+    <img src="../images/mission.jpg" alt="Machubeni Clinic Serving Rural Community" style="width: 100%; border-radius: 8px; object-fit: cover;">
+  </div>
+  
+  <!-- Right side: Text -->
+  <div class="mission-text" style="flex: 2; min-width: 300px;">
+    <h2>Our Mission</h2>
+    <p>
+      At <strong>Machubeni Clinic</strong>, we are dedicated to improving the health and well-being of our rural community. We strive to provide accessible, affordable, and high-quality healthcare with compassion and respect for every individual we serve.
+    </p>
+    <p>
+      Our commitment is to deliver excellent care that meets the unique needs of people living in rural areas, ensuring they receive the medical attention they deserve regardless of their background or financial situation.
+    </p>
+    <p>
+      We believe in proactive wellness, focusing not only on treating illness but also on prevention through health education, early detection, and community outreach programs. Our goal is to empower every person in our community with the knowledge and resources to take control of their health.
+    </p>
+    <p>
+      Supported by a team of passionate healthcare professionals, we maintain the highest standards of care while fostering a supportive and welcoming environment for all our patients.
+    </p>
+  </div>
+</section>
+    
+  
+
+<section class="news">
+  <!-- Left: Map -->
+<iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3399.7011903389694!2d27.186167675770324!3d-31.55981417419593!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e61f891117adcbb%3A0x5be487455ffe21e3!2sMachubeni%20Clinic!5e0!3m2!1sen!2sza!4v1747826723619!5m2!1sen!2sza"
+  width="400"
+  height="300"
+  style="border:0; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);"
+  allowfullscreen=""
+  loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+
+
+  <!-- Right: Text Content -->
+  <div class="news-content">
+    <h2>Latest Community Health News</h2>
+    <p>
+      Stay informed with the latest updates from Machubeni Clinic. From vaccination drives to health education campaigns, we’re committed to keeping our community healthy and informed.
+    </p>
+    <a href="#">Read More</a>
+  </div>
+</section>
+
   </main>
 
   <footer class="footer">
@@ -85,7 +172,20 @@
   // Toggle mobile menu
   document.getElementById('menuToggle').addEventListener('click', function () {
     document.getElementById('mainNav').classList.toggle('active');
+
+      const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+  window.onscroll = function () {
+    scrollTopBtn.style.display = (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100)
+      ? "block" : "none";
+  };
+
+  scrollTopBtn.onclick = function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   });
   </script>
+  <button id="scrollTopBtn" title="Go to top">↑</button>
+
 </body>
 </html>
